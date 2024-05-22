@@ -191,7 +191,7 @@ namespace _25_26
 
                 RegistrationDB.AddRegistrsToDBFile(
                     new Registration(
-                        WhoLogined.Email, 
+                        WhoLogined.loginedUser.Email, 
                         checkBox5.Checked, checkBox21.Checked, checkBox42.Checked,
                         radioVariant, 
                         vznosForFond, 

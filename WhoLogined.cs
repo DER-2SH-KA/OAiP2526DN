@@ -8,6 +8,6 @@ namespace _25_26
 {
     public class WhoLogined
     {
-        public static string Email = "";
+        public static User loginedUser;
     }
 }
