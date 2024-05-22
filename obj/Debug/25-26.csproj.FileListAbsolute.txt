@@ -57,3 +57,4 @@ O:\MYDESKTOP\Documents\ForJob\Git\OAiP_25-26_Git\obj\Debug\25-26.csproj.Generate
 O:\MYDESKTOP\Documents\ForJob\Git\OAiP_25-26_Git\obj\Debug\25-26.csproj.CoreCompileInputs.cache
 O:\MYDESKTOP\Documents\ForJob\Git\OAiP_25-26_Git\obj\Debug\25-26.exe
 O:\MYDESKTOP\Documents\ForJob\Git\OAiP_25-26_Git\obj\Debug\25-26.pdb
+O:\MYDESKTOP\Documents\ForJob\Git\OAiP_25-26_Git\obj\Debug\_25_26.FormEditProfile.resources

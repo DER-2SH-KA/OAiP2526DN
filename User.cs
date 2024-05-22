@@ -15,7 +15,7 @@ namespace _25_26
         public byte Sex;
         public string PathToPhoto;
         public DateTime Bithday;
-        public string Country;
+        public int Country;
 
         public User() {
             Email = "";
@@ -25,14 +25,14 @@ namespace _25_26
             Sex = 0;
             PathToPhoto = "";
             Bithday = DateTime.MinValue;
-            Country = "";
+            Country = 0;
         }
 
         public User(
             string newEmail, string newPassword, 
             string newFirstName, string newSecondName, 
             byte newSex, string newPathToPhoto, 
-            DateTime newBithday, string newCountry
+            DateTime newBithday, int newCountry
         )
         {
             Email = newEmail;

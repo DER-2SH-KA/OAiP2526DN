@@ -104,5 +104,12 @@ namespace _25_26
             rom.Owner = this;
             rom.Show();
         }
+
+        private void buttonProfileEdit_Click(object sender, EventArgs e)
+        {
+            FormEditProfile fep = new FormEditProfile();
+            fep.Owner = this;
+            fep.ShowDialog();
+        }
     }
 }

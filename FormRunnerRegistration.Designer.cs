@@ -56,9 +56,9 @@
             this.labelCountry = new System.Windows.Forms.Label();
             this.panelDateTime = new System.Windows.Forms.Panel();
             this.labelDateTime = new System.Windows.Forms.Label();
-            this.timerRunnerRegistration = new System.Windows.Forms.Timer(this.components);
             this.buttonSignUp = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
+            this.timerRunnerRegistration = new System.Windows.Forms.Timer(this.components);
             this.panelBack.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).BeginInit();
             this.panelDateTime.SuspendLayout();
@@ -350,11 +350,6 @@
             this.labelDateTime.Text = "ДатеВремя";
             this.labelDateTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // timerRunnerRegistration
-            // 
-            this.timerRunnerRegistration.Enabled = true;
-            this.timerRunnerRegistration.Tick += new System.EventHandler(this.timerRunnerRegistration_Tick);
-            // 
             // buttonSignUp
             // 
             this.buttonSignUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
@@ -378,6 +373,11 @@
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             this.buttonCancel.Paint += new System.Windows.Forms.PaintEventHandler(this.buttonCancel_Paint);
+            // 
+            // timerRunnerRegistration
+            // 
+            this.timerRunnerRegistration.Enabled = true;
+            this.timerRunnerRegistration.Tick += new System.EventHandler(this.timerRunnerRegistration_Tick);
             // 
             // FormRunnerRegistration
             // 
@@ -451,8 +451,8 @@
         private System.Windows.Forms.Label labelCountry;
         private System.Windows.Forms.Panel panelDateTime;
         private System.Windows.Forms.Label labelDateTime;
-        private System.Windows.Forms.Timer timerRunnerRegistration;
         private System.Windows.Forms.Button buttonSignUp;
         private System.Windows.Forms.Button buttonCancel;
+        private System.Windows.Forms.Timer timerRunnerRegistration;
     }
 }

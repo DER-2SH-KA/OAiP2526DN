@@ -165,6 +165,7 @@
             this.buttonProfileEdit.TabIndex = 15;
             this.buttonProfileEdit.Text = "Редактирование профиля";
             this.buttonProfileEdit.UseVisualStyleBackColor = true;
+            this.buttonProfileEdit.Click += new System.EventHandler(this.buttonProfileEdit_Click);
             this.buttonProfileEdit.Paint += new System.Windows.Forms.PaintEventHandler(this.buttonProfileEdit_Paint);
             // 
             // buttonMyContacts

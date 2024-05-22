@@ -48,6 +48,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ColorsAndFonts.cs" />
+    <Compile Include="FormEditProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditProfile.Designer.cs">
+      <DependentUpon>FormEditProfile.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +106,9 @@
     <Compile Include="User.cs" />
     <Compile Include="UsersDBInfo.cs" />
     <Compile Include="WhoLogined.cs" />
+    <EmbeddedResource Include="FormEditProfile.resx">
+      <DependentUpon>FormEditProfile.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
