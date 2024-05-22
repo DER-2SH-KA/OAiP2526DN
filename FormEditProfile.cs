@@ -71,6 +71,7 @@ namespace _25_26
             dateTimePickerBithday.Value = WhoLogined.loginedUser.Bithday;
             comboBoxCountry.SelectedIndex = WhoLogined.loginedUser.Country;
 
+            MessageBox.Show(WhoLogined.loginedUser.PathToPhoto);
             pictureBoxImage.Image = new Bitmap(WhoLogined.loginedUser.PathToPhoto);
             textBoxImage.Text = WhoLogined.loginedUser.PathToPhoto;
 
@@ -145,11 +146,18 @@ namespace _25_26
                         textBoxImage.Text = of.SafeFileName;
                     }
                 }
+                else 
+                {
+                    if (pathToPhotoPublic == "")
+                        pathToPhotoPublic = WhoLogined.loginedUser.PathToPhoto;
+                }
+                // MessageBox.Show(pathToPhotoPublic);
             }
         }
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
+            // MessageBox.Show(pathToPhotoPublic);
             string password = textBoxPassword.Text.Trim();
             string password2 = textBoxPassword2.Text.Trim();
             string firstName = textBoxFirstName.Text.Trim();
@@ -174,6 +182,10 @@ namespace _25_26
                                     sex, pathToPhotoPublic, dateTime, comboBoxCountry.SelectedIndex
                                 )
                             );
+                            WhoLogined.loginedUser = new User(
+                                    WhoLogined.loginedUser.Email, password, firstName, secondName,
+                                    sex, pathToPhotoPublic, dateTime, comboBoxCountry.SelectedIndex
+                                );
                         }
                         else MessageBox.Show("Указана неизвестная страна", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }

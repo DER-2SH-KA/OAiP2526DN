@@ -1,0 +1,2 @@
+﻿ted391@mail.ru|True|False|True|0|500|185|Фонд кошек|2024.5.10
+sna@yandex.ru|True|False|False|2|2000|65|Фонд кошек|2023.12.12
