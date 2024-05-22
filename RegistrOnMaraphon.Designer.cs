@@ -47,7 +47,6 @@
             this.radioButtonA = new System.Windows.Forms.RadioButton();
             this.labelComplects = new System.Windows.Forms.Label();
             this.comboBoxCHarityes = new System.Windows.Forms.ComboBox();
-            this.textBoxVznos = new System.Windows.Forms.TextBox();
             this.labelSummaVZnos = new System.Windows.Forms.Label();
             this.labelVznos2 = new System.Windows.Forms.Label();
             this.labelDetVznos = new System.Windows.Forms.Label();
@@ -55,6 +54,7 @@
             this.labelRegVznos = new System.Windows.Forms.Label();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.buttonSignUp = new System.Windows.Forms.Button();
+            this.textBoxVznos = new System.Windows.Forms.TextBox();
             this.panelBack.SuspendLayout();
             this.panelDateTime.SuspendLayout();
             this.SuspendLayout();
@@ -170,6 +170,7 @@
             this.checkBox42.TabIndex = 16;
             this.checkBox42.Text = "42km Полный марафон($145)";
             this.checkBox42.UseVisualStyleBackColor = true;
+            this.checkBox42.CheckedChanged += new System.EventHandler(this.checkBox42_CheckedChanged);
             // 
             // checkBox21
             // 
@@ -181,6 +182,7 @@
             this.checkBox21.TabIndex = 26;
             this.checkBox21.Text = "21km Полумарафон ($75)";
             this.checkBox21.UseVisualStyleBackColor = true;
+            this.checkBox21.CheckedChanged += new System.EventHandler(this.checkBox21_CheckedChanged);
             // 
             // checkBox5
             // 
@@ -192,39 +194,40 @@
             this.checkBox5.TabIndex = 27;
             this.checkBox5.Text = "5km Малая дистанция ($20)";
             this.checkBox5.UseVisualStyleBackColor = true;
+            this.checkBox5.CheckedChanged += new System.EventHandler(this.checkBox5_CheckedChanged);
             // 
             // radioButtonC
             // 
             this.radioButtonC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.radioButtonC.Location = new System.Drawing.Point(479, 382);
+            this.radioButtonC.Location = new System.Drawing.Point(482, 369);
             this.radioButtonC.Name = "radioButtonC";
-            this.radioButtonC.Size = new System.Drawing.Size(252, 53);
+            this.radioButtonC.Size = new System.Drawing.Size(284, 53);
             this.radioButtonC.TabIndex = 31;
-            this.radioButtonC.TabStop = true;
             this.radioButtonC.Text = "Вариант C ($45): Вариант B + футболка + сувенирный буклет";
             this.radioButtonC.UseVisualStyleBackColor = true;
+            this.radioButtonC.CheckedChanged += new System.EventHandler(this.radioButtonC_CheckedChanged);
             // 
             // radioButtonB
             // 
             this.radioButtonB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.radioButtonB.Location = new System.Drawing.Point(479, 327);
+            this.radioButtonB.Location = new System.Drawing.Point(482, 314);
             this.radioButtonB.Name = "radioButtonB";
-            this.radioButtonB.Size = new System.Drawing.Size(252, 49);
+            this.radioButtonB.Size = new System.Drawing.Size(284, 49);
             this.radioButtonB.TabIndex = 30;
-            this.radioButtonB.TabStop = true;
             this.radioButtonB.Text = "Вариант B ($20): вариант A + бейсболка + бутылка воды";
             this.radioButtonB.UseVisualStyleBackColor = true;
+            this.radioButtonB.CheckedChanged += new System.EventHandler(this.radioButtonB_CheckedChanged);
             // 
             // radioButtonA
             // 
             this.radioButtonA.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.radioButtonA.Location = new System.Drawing.Point(479, 268);
+            this.radioButtonA.Location = new System.Drawing.Point(482, 255);
             this.radioButtonA.Name = "radioButtonA";
             this.radioButtonA.Size = new System.Drawing.Size(284, 53);
             this.radioButtonA.TabIndex = 29;
-            this.radioButtonA.TabStop = true;
             this.radioButtonA.Text = "Вариант А ($0):  Номер бегуна \r\n+ RFID браслет";
             this.radioButtonA.UseVisualStyleBackColor = true;
+            this.radioButtonA.CheckedChanged += new System.EventHandler(this.radioButtonA_CheckedChanged);
             // 
             // labelComplects
             // 
@@ -239,17 +242,12 @@
             // comboBoxCHarityes
             // 
             this.comboBoxCHarityes.FormattingEnabled = true;
+            this.comboBoxCHarityes.Items.AddRange(new object[] {
+            "Фонд кошек"});
             this.comboBoxCHarityes.Location = new System.Drawing.Point(204, 483);
             this.comboBoxCHarityes.Name = "comboBoxCHarityes";
             this.comboBoxCHarityes.Size = new System.Drawing.Size(121, 21);
             this.comboBoxCHarityes.TabIndex = 36;
-            // 
-            // textBoxVznos
-            // 
-            this.textBoxVznos.Location = new System.Drawing.Point(204, 524);
-            this.textBoxVznos.Name = "textBoxVznos";
-            this.textBoxVznos.Size = new System.Drawing.Size(121, 20);
-            this.textBoxVznos.TabIndex = 35;
             // 
             // labelSummaVZnos
             // 
@@ -257,9 +255,9 @@
             this.labelSummaVZnos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.labelSummaVZnos.Location = new System.Drawing.Point(65, 524);
             this.labelSummaVZnos.Name = "labelSummaVZnos";
-            this.labelSummaVZnos.Size = new System.Drawing.Size(118, 20);
+            this.labelSummaVZnos.Size = new System.Drawing.Size(141, 20);
             this.labelSummaVZnos.TabIndex = 34;
-            this.labelSummaVZnos.Text = "Сумма взноса:";
+            this.labelSummaVZnos.Text = "Сумма взноса ($):";
             // 
             // labelVznos2
             // 
@@ -283,13 +281,13 @@
             // 
             // labelVznos
             // 
-            this.labelVznos.AutoSize = true;
             this.labelVznos.Font = new System.Drawing.Font("Microsoft Sans Serif", 42F);
-            this.labelVznos.Location = new System.Drawing.Point(547, 480);
+            this.labelVznos.Location = new System.Drawing.Point(469, 480);
             this.labelVznos.Name = "labelVznos";
-            this.labelVznos.Size = new System.Drawing.Size(151, 64);
+            this.labelVznos.Size = new System.Drawing.Size(315, 64);
             this.labelVznos.TabIndex = 38;
             this.labelVznos.Text = "$999";
+            this.labelVznos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelRegVznos
             // 
@@ -322,19 +320,27 @@
             this.buttonSignUp.TabIndex = 41;
             this.buttonSignUp.Text = "Регистрация";
             this.buttonSignUp.UseVisualStyleBackColor = true;
+            this.buttonSignUp.Click += new System.EventHandler(this.buttonSignUp_Click);
             this.buttonSignUp.Paint += new System.Windows.Forms.PaintEventHandler(this.buttonSignUp_Paint);
+            // 
+            // textBoxVznos
+            // 
+            this.textBoxVznos.Location = new System.Drawing.Point(212, 526);
+            this.textBoxVznos.Name = "textBoxVznos";
+            this.textBoxVznos.Size = new System.Drawing.Size(113, 20);
+            this.textBoxVznos.TabIndex = 43;
             // 
             // RegistrOnMaraphon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 654);
+            this.Controls.Add(this.textBoxVznos);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonSignUp);
             this.Controls.Add(this.labelVznos);
             this.Controls.Add(this.labelRegVznos);
             this.Controls.Add(this.comboBoxCHarityes);
-            this.Controls.Add(this.textBoxVznos);
             this.Controls.Add(this.labelSummaVZnos);
             this.Controls.Add(this.labelVznos2);
             this.Controls.Add(this.labelDetVznos);
@@ -381,7 +387,6 @@
         private System.Windows.Forms.RadioButton radioButtonA;
         private System.Windows.Forms.Label labelComplects;
         private System.Windows.Forms.ComboBox comboBoxCHarityes;
-        private System.Windows.Forms.TextBox textBoxVznos;
         private System.Windows.Forms.Label labelSummaVZnos;
         private System.Windows.Forms.Label labelVznos2;
         private System.Windows.Forms.Label labelDetVznos;
@@ -389,5 +394,6 @@
         private System.Windows.Forms.Label labelRegVznos;
         private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.Button buttonSignUp;
+        private System.Windows.Forms.TextBox textBoxVznos;
     }
 }

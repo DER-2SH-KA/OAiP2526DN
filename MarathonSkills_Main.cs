@@ -41,6 +41,11 @@ namespace _25_26
             {
                 UsersDBInfo.CreateUsersDBFile();
             }
+
+            if (!System.IO.File.Exists(RegistrationDB.PATH_TO_REGISTRATION_DB))
+            {
+                RegistrationDB.CreateRegistrsDBFile();
+            }
         }
 
         private void buttonIWantToBeRunner_Click(object sender, EventArgs e)

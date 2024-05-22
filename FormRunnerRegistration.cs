@@ -149,10 +149,6 @@ namespace _25_26
                                         sex, pathToPhotoPublic, dateTime, country
                                     )
                                 );
-                                MessageBox.Show(
-                                    "Новый аккаунт был зарегистрирован успешно!", "Уведомление", 
-                                    MessageBoxButtons.OK, MessageBoxIcon.Information
-                                );
                             }
                             else MessageBox.Show("Указана неизвестная страна", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }

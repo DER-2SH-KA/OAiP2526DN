@@ -87,6 +87,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registration.cs" />
+    <Compile Include="RegistrationDB.cs" />
     <Compile Include="RegistrOnMaraphon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +99,7 @@
     <Compile Include="Timer.cs" />
     <Compile Include="User.cs" />
     <Compile Include="UsersDBInfo.cs" />
+    <Compile Include="WhoLogined.cs" />
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>

@@ -12,6 +12,9 @@ namespace _25_26
 {
     public partial class RegistrOnMaraphon : Form
     {
+        private static int payVznosByDistation = 0;
+        private static int payVznosByEquipment = 0;
+
         public RegistrOnMaraphon()
         {
             InitializeComponent();
@@ -46,7 +49,7 @@ namespace _25_26
             RoundAndDesign.setTextBoxDesign(textBoxVznos);
 
             RoundAndDesign.setLabelDesign(labelRegVznos, ColorsAndFonts.GrayOur);
-            RoundAndDesign.setLabelDesign(labelVznos, ColorsAndFonts.DarkGrayOur);
+            RoundAndDesign.setLabelDesign(labelVznos, ColorsAndFonts.GrayOur);
 
             RoundAndDesign.setButtonDesign(buttonSignUp);
             RoundAndDesign.setButtonDesign(buttonCancel);
@@ -54,7 +57,8 @@ namespace _25_26
             RoundAndDesign.setPanelDesign(panelDateTime);
             labelDateTime.ForeColor = Color.White;
 
-
+            comboBoxCHarityes.SelectedIndex = 0;
+            labelVznos.Text = "$0";
         }
 
         private void buttonLogOut_Click(object sender, EventArgs e)
@@ -91,6 +95,112 @@ namespace _25_26
         {
             TimeSpan span = Timer.getTimeSpaceBeforeMaraphon();
             labelDateTime.Text = $"{span.Days} дней {span.Hours} часов {span.Minutes} минут {span.Seconds} секунд до старта марафона!";
+        }
+
+        private void reloadeLabelVznos()
+        {
+            labelVznos.Text = $"${payVznosByDistation + payVznosByEquipment}";
+        }
+
+        private void checkBox42_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox42.Checked) payVznosByDistation += 145;
+            else payVznosByDistation -= 145;
+            reloadeLabelVznos();
+        }
+
+        private void checkBox21_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox21.Checked) payVznosByDistation += 75;
+            else payVznosByDistation -= 75;
+            reloadeLabelVznos();
+        }
+
+        private void checkBox5_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox5.Checked) payVznosByDistation += 20;
+            else payVznosByDistation -= 20;
+            reloadeLabelVznos();
+        }
+
+        private void radioButtonA_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButtonA.Checked) 
+            {
+                payVznosByEquipment = 0;
+                radioButtonB.Checked = false;
+                radioButtonC.Checked = false;
+            }
+            reloadeLabelVznos();
+        }
+
+        private void radioButtonB_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButtonB.Checked)
+            {
+                payVznosByEquipment = 20;
+                radioButtonA.Checked = false;
+                radioButtonC.Checked = false;
+            }
+            reloadeLabelVznos();
+        }
+
+        private void radioButtonC_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButtonC.Checked)
+            {
+                payVznosByEquipment = 45;
+                radioButtonA.Checked = false;
+                radioButtonB.Checked = false;
+                reloadeLabelVznos();
+            }
+        }
+
+        private void buttonSignUp_Click(object sender, EventArgs e)
+        {
+            double vznosForFond = 0.0;
+            bool canRegistr = true;
+
+            try 
+            {
+                vznosForFond = Convert.ToDouble(textBoxVznos.Text);
+
+                if (vznosForFond < 0) 
+                {
+                    canRegistr = false;
+                }
+            }
+            catch (FormatException) 
+            {
+                canRegistr = false;
+            }
+
+            if (
+                (checkBox42.Checked || checkBox21.Checked || checkBox5.Checked) && 
+                (radioButtonA.Checked || radioButtonB.Checked || radioButtonC.Checked) && 
+                canRegistr
+            ) 
+            {
+                byte radioVariant = 4;
+
+                if (radioButtonA.Checked) radioVariant = 0;
+                else if (radioButtonB.Checked) radioVariant = 1;
+                else if (radioButtonC.Checked) radioVariant = 2;
+
+                DateTime regTime = DateTime.Now;
+
+                RegistrationDB.AddRegistrsToDBFile(
+                    new Registration(
+                        WhoLogined.Email, 
+                        checkBox5.Checked, checkBox21.Checked, checkBox42.Checked,
+                        radioVariant, 
+                        vznosForFond, 
+                        (payVznosByDistation + payVznosByEquipment), 
+                        comboBoxCHarityes.Text.Trim(), 
+                        new DateTime(regTime.Year, regTime.Month, regTime.Day)
+                    )
+                );
+            }
         }
     }
 }

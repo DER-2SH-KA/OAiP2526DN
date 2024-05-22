@@ -50,6 +50,13 @@ namespace _25_26
             textbox.Font = ColorsAndFonts.ItalicFont12;
         }
 
+        public static void setMaskedTextBoxDesign(MaskedTextBox mtextbox)
+        {
+            mtextbox.BackColor = Color.White;
+            mtextbox.ForeColor = ColorsAndFonts.DarkGrayOur;
+            mtextbox.Font = ColorsAndFonts.ItalicFont12;
+        }
+
         public static void setComboBoxDesign(ComboBox comboBox)
         {
             comboBox.BackColor = Color.White;

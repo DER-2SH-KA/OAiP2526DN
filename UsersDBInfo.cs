@@ -35,15 +35,35 @@ namespace _25_26
 
         public static void AddUserToDBFile(User user)
         {
-            using (StreamWriter sw = new StreamWriter(PATH_TO_USERS_DB, true, Encoding.UTF8))
+            List<User> tempList = ReadUsersDBFile();
+            bool isItNewUser = true;
+
+            foreach (User userr in tempList) 
             {
-                sw.WriteLine(
-                    $"{user.Email}|{user.Password}|{user.FirstName}|" +
-                    $"{user.SecondName}|{user.Sex}|{user.PathToPhoto}|" +
-                    $"{user.Bithday.Year}.{user.Bithday.Month}.{user.Bithday.Day}|" +
-                    $"{user.Country}"
-                );
+                if (userr.Email == user.Email) 
+                {
+                    isItNewUser = false;
+                    break;
+                }
             }
+
+            if (isItNewUser)
+            {
+                using (StreamWriter sw = new StreamWriter(PATH_TO_USERS_DB, true, Encoding.UTF8))
+                {
+                    sw.WriteLine(
+                        $"{user.Email}|{user.Password}|{user.FirstName}|" +
+                        $"{user.SecondName}|{user.Sex}|{user.PathToPhoto}|" +
+                        $"{user.Bithday.Year}.{user.Bithday.Month}.{user.Bithday.Day}|" +
+                        $"{user.Country}"
+                    );
+                    MessageBox.Show(
+                        "Новый аккаунт был зарегистрирован успешно!", "Уведомление",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information
+                    );
+                }
+            }
+            else MessageBox.Show("Пользователь с такой электронной почтой уже существует!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private static void FillUsersList() 

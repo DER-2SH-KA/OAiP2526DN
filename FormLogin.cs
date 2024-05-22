@@ -92,6 +92,7 @@ namespace _25_26
                         if (user.Password == password) 
                         {
                             signin = true;
+                            WhoLogined.Email = user.Email;
                             break;
                         }
                     }
