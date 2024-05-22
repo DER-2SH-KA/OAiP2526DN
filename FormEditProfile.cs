@@ -71,7 +71,7 @@ namespace _25_26
             dateTimePickerBithday.Value = WhoLogined.loginedUser.Bithday;
             comboBoxCountry.SelectedIndex = WhoLogined.loginedUser.Country;
 
-            MessageBox.Show(WhoLogined.loginedUser.PathToPhoto);
+            // MessageBox.Show(WhoLogined.loginedUser.PathToPhoto);
             pictureBoxImage.Image = new Bitmap(WhoLogined.loginedUser.PathToPhoto);
             textBoxImage.Text = WhoLogined.loginedUser.PathToPhoto;
 
