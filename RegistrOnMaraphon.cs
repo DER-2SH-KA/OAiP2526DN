@@ -53,6 +53,8 @@ namespace _25_26
 
             RoundAndDesign.setPanelDesign(panelDateTime);
             labelDateTime.ForeColor = Color.White;
+
+
         }
 
         private void buttonLogOut_Click(object sender, EventArgs e)
