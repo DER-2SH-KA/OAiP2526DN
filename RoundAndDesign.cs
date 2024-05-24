@@ -25,6 +25,16 @@ namespace _25_26
             btn.Region = Button_Region;
         }
 
+        public static void setRoundPictureBox(PictureBox pictureBox) 
+        {
+            GraphicsPath grPath = new GraphicsPath();
+            grPath.AddEllipse(0, 0, pictureBox.Width, pictureBox.Height);
+
+            Region pbRegion = new Region(grPath);
+
+            pictureBox.Region = pbRegion;
+        }
+
         public static void setButtonDesign(Button btn)
         {
             btn.FlatStyle = FlatStyle.Flat;

@@ -46,6 +46,11 @@ namespace _25_26
             {
                 RegistrationDB.CreateRegistrsDBFile();
             }
+
+            if (!System.IO.File.Exists(SponsorsDB.PATH_TO_SPONSOR_DB))
+            {
+                SponsorsDB.CreateSponsorsDBFile();
+            }
         }
 
         private void buttonIWantToBeRunner_Click(object sender, EventArgs e)

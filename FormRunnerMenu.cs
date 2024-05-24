@@ -111,5 +111,12 @@ namespace _25_26
             fep.Owner = this;
             fep.ShowDialog();
         }
+
+        private void buttonMySponsors_Click(object sender, EventArgs e)
+        {
+            FormMySponsors fms = new FormMySponsors();
+            fms.Owner = this;
+            fms.ShowDialog();
+        }
     }
 }

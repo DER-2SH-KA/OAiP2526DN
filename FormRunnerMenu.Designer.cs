@@ -154,6 +154,7 @@
             this.buttonMySponsors.TabIndex = 16;
             this.buttonMySponsors.Text = "Мои спонсоры";
             this.buttonMySponsors.UseVisualStyleBackColor = true;
+            this.buttonMySponsors.Click += new System.EventHandler(this.buttonMySponsors_Click);
             this.buttonMySponsors.Paint += new System.Windows.Forms.PaintEventHandler(this.buttonMySponsors_Paint);
             // 
             // buttonProfileEdit

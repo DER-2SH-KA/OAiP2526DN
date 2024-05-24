@@ -243,8 +243,6 @@
             // comboBoxCHarityes
             // 
             this.comboBoxCHarityes.FormattingEnabled = true;
-            this.comboBoxCHarityes.Items.AddRange(new object[] {
-            "Фонд кошек"});
             this.comboBoxCHarityes.Location = new System.Drawing.Point(204, 483);
             this.comboBoxCHarityes.Name = "comboBoxCHarityes";
             this.comboBoxCHarityes.Size = new System.Drawing.Size(121, 21);

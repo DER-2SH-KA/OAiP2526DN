@@ -18,7 +18,7 @@ namespace _25_26
 
         public static void CreateRegistrsDBFile()
         {
-            FillUsersList();
+            FillRegistrsList();
             using (StreamWriter sw = new StreamWriter(PATH_TO_REGISTRATION_DB, false, Encoding.UTF8))
             {
                 foreach (Registration rgstr in RegistrsList)
@@ -76,7 +76,7 @@ namespace _25_26
             else MessageBox.Show("Вы уже зарегистрированы на марафон!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
-        private static void FillUsersList()
+        private static void FillRegistrsList()
         {
             RegistrsList.Add(
                 new Registration(

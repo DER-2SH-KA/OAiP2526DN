@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -57,7 +58,18 @@ namespace _25_26
             RoundAndDesign.setPanelDesign(panelDateTime);
             labelDateTime.ForeColor = Color.White;
 
-            comboBoxCHarityes.SelectedIndex = 0;
+            List<Sponsor> list = SponsorsDB.ReadSponsorsDBFile();
+            foreach (Sponsor sponsor in list)
+            {
+                comboBoxCHarityes.Items.Add(sponsor.Name);
+            }
+
+            if (list.Count != 0)
+            {
+                comboBoxCHarityes.SelectedIndex = 0;
+            }
+            else comboBoxCHarityes.Items.Add("--Нет спонсоров--");
+
             labelVznos.Text = "$0";
         }
 

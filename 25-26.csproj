@@ -66,6 +66,12 @@
     <Compile Include="FormMyContacts.Designer.cs">
       <DependentUpon>FormMyContacts.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormMySponsors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMySponsors.Designer.cs">
+      <DependentUpon>FormMySponsors.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormRunnerAuthentification.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +108,8 @@
       <DependentUpon>RegistrOnMaraphon.cs</DependentUpon>
     </Compile>
     <Compile Include="RoundAndDesign.cs" />
+    <Compile Include="Sponsor.cs" />
+    <Compile Include="SponsorsDB.cs" />
     <Compile Include="Timer.cs" />
     <Compile Include="User.cs" />
     <Compile Include="UsersDBInfo.cs" />
@@ -114,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMyContacts.resx">
       <DependentUpon>FormMyContacts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMySponsors.resx">
+      <DependentUpon>FormMySponsors.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormRunnerAuthentification.resx">
       <DependentUpon>FormRunnerAuthentification.cs</DependentUpon>
