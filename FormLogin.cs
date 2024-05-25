@@ -13,6 +13,7 @@ namespace _25_26
 {
     public partial class FormLogin : Form
     {
+        public string autentifiedUser;
         public FormLogin()
         {
             InitializeComponent();
@@ -91,6 +92,7 @@ namespace _25_26
                     {
                         if (user.Password == password) 
                         {
+                            autentifiedUser = user.Email.Trim();
                             signin = true;
                             break;
                         }
@@ -104,7 +106,7 @@ namespace _25_26
                         MessageBoxButtons.OK, MessageBoxIcon.Information
                     );
 
-                    FormRunnerMenu frm = new FormRunnerMenu();
+                    FormRunnerMenu frm = new FormRunnerMenu(autentifiedUser);
                     frm.Owner = this;
                     frm.Show();
                 }

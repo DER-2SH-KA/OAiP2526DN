@@ -12,8 +12,10 @@ namespace _25_26
 {
     public partial class FormRunnerMenu : Form
     {
-        public FormRunnerMenu()
+        string user;
+        public FormRunnerMenu(string autentifiedUser)
         {
+            user = autentifiedUser;
             InitializeComponent();
         }
 
@@ -25,16 +27,13 @@ namespace _25_26
             RoundAndDesign.setLabelDesign(labelWelcome, Color.White);
             RoundAndDesign.setButtonDesign(buttonBack);
             RoundAndDesign.setButtonDesign(buttonLogOut);
-
+            
             RoundAndDesign.setLabelDesign(labelfaut, ColorsAndFonts.DarkGrayOur);
             RoundAndDesign.setButtonDesign(buttonRegistrOnMaraphon);
             RoundAndDesign.setButtonDesign(buttonMaraphonResults);
             RoundAndDesign.setButtonDesign(buttonProfileEdit);
             RoundAndDesign.setButtonDesign(buttonMySponsors);
             RoundAndDesign.setButtonDesign(buttonMyContacts);
-
-
-
             RoundAndDesign.setPanelDesign(panelDateTime);
             labelDateTime.ForeColor = Color.White;
         }
@@ -103,6 +102,13 @@ namespace _25_26
             RegistrOnMaraphon rom = new RegistrOnMaraphon();
             rom.Owner = this;
             rom.Show();
+        }
+
+        private void buttonMaraphonResults_Click(object sender, EventArgs e)
+        {
+            FormMaraphonResults mr = new FormMaraphonResults(user);
+            mr.Owner = this;
+            mr.Show();
         }
     }
 }

@@ -48,11 +48,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ColorsAndFonts.cs" />
+    <Compile Include="FormAllResults.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAllResults.Designer.cs">
+      <DependentUpon>FormAllResults.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMaraphonResults.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMaraphonResults.Designer.cs">
+      <DependentUpon>FormMaraphonResults.cs</DependentUpon>
     </Compile>
     <Compile Include="FormMyContacts.cs">
       <SubType>Form</SubType>
@@ -97,8 +109,15 @@
     <Compile Include="Timer.cs" />
     <Compile Include="User.cs" />
     <Compile Include="UsersDBInfo.cs" />
+    <Compile Include="UsersResult.cs" />
+    <EmbeddedResource Include="FormAllResults.resx">
+      <DependentUpon>FormAllResults.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMaraphonResults.resx">
+      <DependentUpon>FormMaraphonResults.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMyContacts.resx">
       <DependentUpon>FormMyContacts.cs</DependentUpon>
