@@ -12,7 +12,7 @@ namespace _25_26
 {
     public partial class FormEditProfile : Form
     {
-        private string pathToPhotoPublic = "";
+        private string pathToPhotoPublic = WhoLogined.loginedUser.PathToPhoto;
 
         public FormEditProfile()
         {
@@ -172,7 +172,8 @@ namespace _25_26
                 if (firstName != "" && secondName != "" && firstName != "Имя" && secondName != "Фамилия" &&
                     !firstName.Contains("|") && !secondName.Contains("|"))
                 {
-                    if (pathToPhoto != "" && pathToPhoto != "Photo_logo.jpg" && !pathToPhotoPublic.Contains("|"))
+                    if (pathToPhoto != "" && System.IO.File.Exists(pathToPhotoPublic) && 
+                        pathToPhoto != "Photo_logo.jpg" && pathToPhotoPublic != "" && !pathToPhotoPublic.Contains("|"))
                     {
                         if (country != "" && comboBoxCountry.Items.Contains(country))
                         {

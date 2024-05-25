@@ -118,5 +118,12 @@ namespace _25_26
             fms.Owner = this;
             fms.ShowDialog();
         }
+
+        private void buttonMaraphonResults_Click(object sender, EventArgs e)
+        {
+            FormMaraphonResults mr = new FormMaraphonResults();
+            mr.Owner = this;
+            mr.Show();
+        }
     }
 }

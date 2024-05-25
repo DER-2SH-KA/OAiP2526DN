@@ -96,5 +96,57 @@ namespace _25_26
             rbtn.ForeColor = clr;
             rbtn.BackColor = Color.White;
         }
+
+        public static void setDataGridDesign1(DataGridView dataGridView)
+        {
+            dataGridView.DefaultCellStyle.Font = new Font("Arial", 14);
+            dataGridView.DefaultCellStyle.ForeColor = ColorsAndFonts.DarkGrayOur;
+            dataGridView.DefaultCellStyle.SelectionForeColor = ColorsAndFonts.DarkGrayOur;
+            dataGridView.DefaultCellStyle.BackColor = Color.White;
+            dataGridView.Font = new Font("Arial", 14);
+
+            dataGridView.AlternatingRowsDefaultCellStyle.Font = new Font("Arial", 14);
+            dataGridView.AlternatingRowsDefaultCellStyle.ForeColor = ColorsAndFonts.DarkGrayOur;
+            dataGridView.AlternatingRowsDefaultCellStyle.SelectionForeColor = ColorsAndFonts.DarkGrayOur;
+            dataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
+
+            dataGridView.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 16);
+            dataGridView.ColumnHeadersDefaultCellStyle.ForeColor = ColorsAndFonts.GrayOur;
+            dataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            //dtg back ground white
+
+            dataGridView.BackgroundColor = Color.White;
+        }
+
+
+        public static void setDataGridDesign2(DataGridView dataGridView)
+        {
+            dataGridView.DefaultCellStyle.Font = new Font("Arial", 14);
+            dataGridView.DefaultCellStyle.ForeColor = ColorsAndFonts.DarkGrayOur;
+            dataGridView.DefaultCellStyle.SelectionForeColor = ColorsAndFonts.DarkGrayOur;
+            dataGridView.DefaultCellStyle.BackColor = Color.WhiteSmoke;
+            dataGridView.DefaultCellStyle.SelectionBackColor = Color.WhiteSmoke;
+
+            dataGridView.Font = new Font("Arial", 14);
+            dataGridView.BorderStyle = BorderStyle.None;
+            dataGridView.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGray;
+            dataGridView.AlternatingRowsDefaultCellStyle.SelectionBackColor = Color.LightGray;
+
+
+            dataGridView.AlternatingRowsDefaultCellStyle.Font = new Font("Arial", 14);
+            dataGridView.AlternatingRowsDefaultCellStyle.ForeColor = ColorsAndFonts.DarkGrayOur;
+            dataGridView.AlternatingRowsDefaultCellStyle.SelectionForeColor = ColorsAndFonts.DarkGrayOur;
+            //dataGridView.AlternatingRowsDefaultCellStyle.BackColor = ColorsAndFonts.DarkGrayOur;
+
+
+            dataGridView.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 14, FontStyle.Bold);
+            dataGridView.ColumnHeadersDefaultCellStyle.ForeColor = ColorsAndFonts.DarkGrayOur;
+            dataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.Gray;
+            dataGridView.Columns[0].DefaultCellStyle.Font = new Font("Arial", 14, FontStyle.Bold);
+            dataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dataGridView.BackgroundColor = Color.White;
+        }
+
     }
 }

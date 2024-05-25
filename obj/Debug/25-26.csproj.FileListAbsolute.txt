@@ -59,3 +59,5 @@ O:\MYDESKTOP\Documents\ForJob\Git\OAiP_25-26_Git\obj\Debug\25-26.exe
 O:\MYDESKTOP\Documents\ForJob\Git\OAiP_25-26_Git\obj\Debug\25-26.pdb
 O:\MYDESKTOP\Documents\ForJob\Git\OAiP_25-26_Git\obj\Debug\_25_26.FormEditProfile.resources
 O:\MYDESKTOP\Documents\ForJob\Git\OAiP_25-26_Git\obj\Debug\_25_26.FormMySponsors.resources
+O:\MYDESKTOP\Documents\ForJob\Git\OAiP_25-26_Git\obj\Debug\_25_26.FormAllResults.resources
+O:\MYDESKTOP\Documents\ForJob\Git\OAiP_25-26_Git\obj\Debug\_25_26.FormMaraphonResults.resources

@@ -82,7 +82,7 @@ namespace _25_26
             bool signin = false;
 
             if (email != "" && password != "" && 
-                email != "Enter your email address0" && 
+                email != "Enter your email address" && 
                 password != "Enter your password") 
             {
                 foreach (User user in userListForLogin) 

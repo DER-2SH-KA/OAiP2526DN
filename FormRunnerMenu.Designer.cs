@@ -143,6 +143,7 @@
             this.buttonMaraphonResults.TabIndex = 14;
             this.buttonMaraphonResults.Text = "Результаты марафонов";
             this.buttonMaraphonResults.UseVisualStyleBackColor = true;
+            this.buttonMaraphonResults.Click += new System.EventHandler(this.buttonMaraphonResults_Click);
             this.buttonMaraphonResults.Paint += new System.Windows.Forms.PaintEventHandler(this.buttonMaraphonResults_Paint);
             // 
             // buttonMySponsors
